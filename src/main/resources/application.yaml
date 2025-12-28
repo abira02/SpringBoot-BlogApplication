@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: BlogApplication
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  datasource:
+    url: jdbc:h2:mem:blogdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+server:
+  port: 8081
+springdoc:
+  model-converters:
+    pageable-converter:
+      enabled: true
